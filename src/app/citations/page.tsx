@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { generateAllFormats, type CitationData } from "@/lib/citation-formats";
+import { generateAllFormats, type CitationData, type GeneratedCitation } from "@/lib/citation-formats";
 
 const defaultForm: CitationData = {
   title: "",
@@ -27,7 +27,7 @@ const defaultForm: CitationData = {
 
 export default function CitationsPage() {
   const [form, setForm] = useState<CitationData>(defaultForm);
-  const [citations, setCitations] = useState<Record<string, string> | null>(null);
+  const [citations, setCitations] = useState<GeneratedCitation | null>(null);
   const [copied, setCopied] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);

@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
         doi: doi || null,
         url: url || null,
         format: "APA",
-        text: formats.APA,
+        text: formats.apa,
         type: type || "article",
       },
     });
